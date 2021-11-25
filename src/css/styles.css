@@ -1,0 +1,61 @@
+@import url('./root.css');
+@import url('./top.css');
+@import url('./header.css');
+@import url('./hot.css');
+
+/* крихти на внутрішніх */
+@import url('./breadcrumbs.css');
+
+/* бокова смуга */
+@import url('./aside.css');
+
+/* внутрішня */
+@import url('./page.css');
+
+@import url('./pagination.css');
+
+@import url('./tags.css');
+
+@import url('./title.css');
+
+@import url('./buttons.css');
+
+@import url('./comments.css');
+
+/* single anounce */
+@import url('./article.css');
+
+@import url('./archive.css');
+
+/* сторінка публікацій */
+@import url('./posts.css');
+
+/* хез як їх називати, складна структура */
+
+/* 1 велике фото, 3 блоки біля нього справа та знизу, і довгий сайдбар справа */
+@import url('./blocks-1.css');
+
+/* 2 блоки вгорі, 3 внизу */
+@import url('./blocks-2.css');
+
+/* 3 і 1 трохи ширший блок */
+@import url('./blocks-3.css');
+
+/* сайдбар з текстовими анонсами + 4 блоки по 2 у ряд */
+@import url('./blocks-4.css');
+
+/* 4 колонки: заголовок і 2 артикля під ним */
+@import url('./blocks-5.css');
+
+/* 2 колонки */
+@import url('./blocks-6.css');
+
+/* 40*, 50* */
+@import url('./status.css');
+
+/* video */
+@import url('./video.css');
+
+@import url('./footer.css');
+
+@import url('./copy.css');

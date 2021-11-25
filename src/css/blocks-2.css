@@ -1,0 +1,73 @@
+
+/*
+ * 2 блоки вгорі, 3 внизу
+ */
+
+.blocks-2
+{
+    margin: calc(var(--gap20)*2) 0;
+
+    display: grid;
+    grid-template-columns: repeat(6,1fr);
+    grid-gap: var(--gap20);
+    grid-template-areas: 
+        'blocks-2_1 blocks-2_1 blocks-2_1 blocks-2_2 blocks-2_2 blocks-2_2'
+        'blocks-2_3 blocks-2_3 blocks-2_4 blocks-2_4 blocks-2_5 blocks-2_5';
+}
+
+@media(max-width:776px)
+{
+    .blocks-2
+    {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: 
+            'blocks-2_1 blocks-2_2'
+            'blocks-2_3 blocks-2_4';
+    }
+}
+
+@media(max-width:450px)
+{
+    .blocks-2
+    {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'blocks-2_1'
+            'blocks-2_2'
+            'blocks-2_3'
+            'blocks-2_4';
+    }
+}
+
+.blocks-2 .article:nth-child(1)
+{
+    grid-area: blocks-2_1;
+}
+
+.blocks-2 .article:nth-child(2)
+{
+    grid-area: blocks-2_2;
+}
+
+.blocks-2 .article:nth-child(3)
+{
+    grid-area: blocks-2_3;
+}
+
+.blocks-2 .article:nth-child(4)
+{
+    grid-area: blocks-2_4;
+}
+
+.blocks-2 .article:nth-child(5)
+{
+    grid-area: blocks-2_5;
+}
+
+@media(max-width:776px)
+{
+    .blocks-2 .article:nth-child(5)
+    {
+        display: none;
+    }    
+}

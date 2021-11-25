@@ -1,0 +1,23 @@
+#copy
+{
+    background: var(--copy-bg);
+    color: var(--copy-color);
+    text-align: center;
+    padding: var(--gap10) 0;
+}
+
+#copy p
+{
+    margin: 0;
+}
+
+#copy a
+{
+    color: var(--copy-color);
+}
+
+#copy a:hover,
+#copy a:focus
+{
+    text-decoration: none;
+}

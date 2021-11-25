@@ -1,0 +1,152 @@
+/* 
+ * сайдбар з текстовими анонсами + 6 блоки по 3 у ряд + заголовок нед 6 анонсами
+ */
+
+.blocks-4
+{
+    margin: calc(var(--gap20)*2) 0;
+
+    display: grid;
+    grid-gap: var(--gap20);
+    grid-template-rows: auto repeat(2, 1fr);
+    grid-template-columns: 1.5fr repeat(3,1fr);
+    grid-template-areas: 
+        'blocks-4_aside blocks-4_title blocks-4_title blocks-4_title'
+        'blocks-4_aside blocks-4_1 blocks-4_2 blocks-4_3'
+        'blocks-4_aside blocks-4_4 blocks-4_5 blocks-4_6';
+}
+
+@media(max-width:996px)
+{
+    .blocks-4
+    {
+        grid-template-columns: 1.5fr repeat(2,1fr);
+        grid-template-areas: 
+            'blocks-4_aside blocks-4_title blocks-4_title'
+            'blocks-4_aside blocks-4_1 blocks-4_2'
+            'blocks-4_aside blocks-4_3 blocks-4_4'
+            'blocks-4_aside blocks-4_5 blocks-4_6'
+    }
+}
+
+@media(max-width:776px)
+{
+    .blocks-4
+    {
+        grid-template-columns: repeat(3,1fr);
+        grid-template-areas: 
+            'blocks-4_title blocks-4_title blocks-4_title'
+            'blocks-4_1 blocks-4_2 blocks-4_3'
+            'blocks-4_4 blocks-4_5 blocks-4_6'
+            'blocks-4_aside blocks-4_aside blocks-4_aside'
+    }    
+}
+
+@media(max-width:600px)
+{
+    .blocks-4
+    {
+        grid-template-columns: repeat(2,1fr);
+        grid-template-areas: 
+            'blocks-4_title blocks-4_title'
+            'blocks-4_1 blocks-4_2'
+            'blocks-4_3 blocks-4_4'
+            'blocks-4_5 blocks-4_6'
+            'blocks-4_aside blocks-4_aside'
+    }    
+}
+
+@media(max-width:450px)
+{
+    .blocks-4
+    {
+        grid-template-columns: 1fr;
+        grid-template-areas: 
+            'blocks-4_title'
+            'blocks-4_1'
+            'blocks-4_2'
+            'blocks-4_3'
+            'blocks-4_4'
+            'blocks-4_5'
+            'blocks-4_6'
+            'blocks-4_aside'
+    }    
+}
+
+.blocks-4 .title
+{
+    grid-area: blocks-4_title;
+    margin: var(--gap10) 0;
+}
+
+@media(max-width:600px)
+{
+    .blocks-4 .title
+    {
+        margin: 0;
+    }
+}
+
+.blocks-4 .article:nth-child(1)
+{
+    grid-area: blocks-4_1;
+}
+
+.blocks-4 .article:nth-child(1)
+{
+    grid-area: blocks-4_2;
+}
+
+.blocks-4 .article:nth-child(1)
+{
+    grid-area: blocks-4_3;
+}
+
+.blocks-4 .article:nth-child(1)
+{
+    grid-area: blocks-4_4;
+}
+
+.blocks-4 .article:nth-child(1)
+{
+    grid-area: blocks-4_5;
+}
+
+.blocks-4 .article:nth-child(1)
+{
+    grid-area: blocks-4_6;
+}
+
+.blocks-4 aside
+{
+    grid-area: blocks-4_aside;
+}
+
+.blocks-4 aside .article h1
+{
+    margin-top: 0;
+}
+
+.blocks-4 aside .article time
+{
+    margin: var(--gap10) 0;
+    transition: .5s;
+}
+
+/* сунемо годину вправо */
+.blocks-4 aside .article-table:hover time
+{
+    transform: translateX(5px);
+}
+
+.blocks-4 aside .article:nth-of-type(1)
+{
+    border: none;
+    margin-top: var(--gap10);
+}
+
+/* якщо потрібно якийсь допис разом з фоткою */
+.blocks-4 aside .picture
+{
+    margin-bottom: var(--gap10);
+}

@@ -1,0 +1,23 @@
+.button
+{
+    display: block;
+    text-align: center;
+    padding: var(--gap10) var(--gap15);
+    color: var(--button-color);
+    background: var(--button-bg);
+    text-decoration: none;
+    margin-top: var(--gap20);
+    margin-bottom: var(--gap20);
+}
+
+.button:hover,
+.button:focus
+{
+    color: var(--button-color-hover);
+    background: var(--button-bg-hover);
+}
+
+.button-bottom
+{
+    margin-top: auto;
+}
