@@ -200,7 +200,8 @@
     z-index: 3;
 }
 
-#search form
+#search form,
+#search .form
 {
     position: relative;
 }
@@ -214,7 +215,8 @@
 }
 
 /* mobile */
-#search form.active
+#search form.active,
+#search .form.active
 {
     position: fixed;
     top: 0;
@@ -264,7 +266,8 @@
     font-family: inherit;
 }
 
-#search form.active input
+#search form.active input,
+#search .form.active input
 {
     border-color: var(--first);
     width: 95%;
@@ -287,20 +290,23 @@
 }
 
 /* mobile */
-#search form.active button
+#search form.active button,
+#search .form.active button
 {
     top: calc(50% - 10px);
     right: 20px;
 }
 
-#search form svg
+#search form svg,
+#search .form svg
 {
     width: 16px;
     height: 16px;
     fill: var(--form-bg);
 }
 
-#search form.active button svg
+#search form.active button svg,
+#search .form.active button svg
 {
     fill: var(--first)
 }

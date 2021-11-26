@@ -1,9 +1,32 @@
-import React from 'react'
+import React, {useState} from 'react'
 
 import logo from '../images/logo.png'
 import logoWebp from '../images/logo.webp'
 
 export default function Header() {
+
+    /*
+    /////////////////////////////////////
+    // перевірка, що вводиться у пошук //
+    /////////////////////////////////////
+    */
+
+    const word = '12345'
+
+    // значення поля і обробка по введенню
+    const [searchState, setSearchState] = useState('')
+
+    // бул і обробка по кліку
+    const [checkState, setCheckState] = useState(false)
+
+    function check(){
+
+        if(searchState === word){
+
+            setCheckState(true)
+        }
+    }
+
     return (
         <header id="header">
             <div className="wrapper">
@@ -42,12 +65,23 @@ export default function Header() {
                 </nav>
 
                 <div id="search">
-                    <form method="post">
-                        <input type="search" placeholder="type word" />
-                        <button aria-label="search button">
+                    {/* <form> */}
+                    <div className="form">
+
+                        <input type="text" placeholder="type word" onChange={ (event) => {
+
+                            setSearchState(event.target.value)
+
+                        }} />
+
+                        <button aria-label="search button" onClick={ check }>
                             <svg fill="currentColor" viewBox="0 0 16 16"><path d="M11.742 10.344a6.5 6.5 0 1 0-1.397 1.398h-.001c.03.04.062.078.098.115l3.85 3.85a1 1 0 0 0 1.415-1.414l-3.85-3.85a1.007 1.007 0 0 0-.115-.1zM12 6.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0z"/></svg>
                         </button>
-                    </form>
+
+                        {checkState && alert('слово співпало!')}
+
+                    </div>
+                    {/* </form> */}
 
                     <div className="search"></div>
                     
